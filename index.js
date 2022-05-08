@@ -9,9 +9,9 @@ const mission = "node";
 
 // eslint-disable-next-line no-unused-vars
 const inMission = ExplorerService.filterByMission(explorers, mission);
-// console.log(`1.- Los explorer de la mision ${mission.toUpperCase()} son: `);
-// console.log(inMission);
-// console.log(`=============================================\n`);
+console.log(`1.- Los explorer de la mision ${mission.toUpperCase()} son: `);
+console.log(inMission);
+console.log(`=============================================\n`);
 
 // eslint-disable-next-line no-unused-vars
 const cantidad = ExplorerService.getAmountOfExplorersByMission(explorers, mission);
@@ -33,13 +33,13 @@ const explorer15 = {name: "Miguel", score: 15}; // {name: "Explorer15", score: 1
 
 
 const uno = FizzbuzzService.applyValidationInExplorer(explorer1);
-console.log(`El explorer ${explorer1.name} obtiene = ${uno}`);
+// console.log(`El explorer ${explorer1.name} obtiene = ${uno}`);
 
 const tres = FizzbuzzService.applyValidationInExplorer(explorer3); 
-console.log(`El explorer ${explorer3.name} obtiene = ${tres}`);
+// console.log(`El explorer ${explorer3.name} obtiene = ${tres}`);
 
 const cinco = FizzbuzzService.applyValidationInExplorer(explorer5); 
-console.log(`El explorer ${explorer5.name} obtiene = ${cinco}`);
+// console.log(`El explorer ${explorer5.name} obtiene = ${cinco}`);
 
 const quince = FizzbuzzService.applyValidationInExplorer(explorer15); 
-console.log(`El explorer ${explorer15.name} obtiene = ${quince}`);
+// console.log(`El explorer ${explorer15.name} obtiene = ${quince}`);
