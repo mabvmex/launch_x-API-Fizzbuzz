@@ -1,4 +1,6 @@
 class ExplorerService {
+    // mission = "node";
+  
     static filterByMission(explorers, mission) {
 
         const explorersInNode = explorers.filter(
