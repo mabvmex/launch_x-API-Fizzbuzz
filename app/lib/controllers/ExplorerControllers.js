@@ -33,8 +33,8 @@ class ExplorerController {
     }
 }
 
-ExplorerController.getExplorerByMission("node");
-ExplorerController.getExplorersUsernamesByMission("node");
-ExplorerController.getExplorersAmonutByMission("node");
+// ExplorerController.getExplorerByMission("node");
+// ExplorerController.getExplorersUsernamesByMission("node");
+// ExplorerController.getExplorersAmonutByMission("node");
 
 module.exports = ExplorerController;
