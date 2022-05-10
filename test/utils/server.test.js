@@ -1,44 +1,26 @@
-// describe("Unit test for Server", () => {
-//     test("1.- Testing to see if Jest works", (done) => {
-        
-//         const app = "./../../app/lib/server.js";
-//         const supertest = require("supertest");
-//         const req = supertest(app);
-        
-        
-//         const res = req.get("/test");
+const request = require("supertest");
+const app = require("./../../app/lib/server");
 
-//         expect(res.status).toBe(200);
-//         // expect(res.body.message).toBe("PASS!!!");
-//         done();
-//     });
-// });
+describe("== Unit Testing for server.js ==", () => {
+    test("1.- Solicitud GET para '/' muestra 'status code' 200", async () => {
+        const response = await request(app).get("/").send();
+        expect(response.statusCode).toBe(200);
+        
+    });
+    
+    test("2.- Solicitud GET para '/v1/explorer/node' muestra 'status code' 200", async () => {
+        const response = await request(app).get("/v1/explorer/node").send();
+        expect(response.statusCode).toBe(200);
+    });
 
-// describe("Unit test for Server", () => {
-//     it("2.- Get '/v1/explorer", (done) => {
-//         request(app)
-//             .get("/v1/explorer/node")
-//             .expect(200)
-//             .expect((res) => {
-//                 expect(res.json).toBe("hola");
-//             })
-//             .end((err, res) => {
-//                 if (err) return done(err);
-//                 return done();
-//             });
-//     });
+    test("3.- Solicitud GET para '/v1/explorer/username/node' muestra 'status code' 200", async () => {
+        const response = await request(app).get("/v1/explorer/usernames/node").send();
+        expect(response.statusCode).toBe(200);
+    });
 
-// test("2.- GET /v1/explorer/mission", (done) => {
-//     request(app)
-//         .get("/launchX")
-//         .expect(200)
-//         .expect((res) => {
-//             console.log(res.text);
-//             expect(res.text).toBe("launchX");
-//         })
-//         .end((err, res) => {
-//             if (err) return done(err);
-//             return done;
-//         });
-// });
-// });
+    test("4.- Solicitud GET para '/v1/explorer/amount/node' muestra 'status code' 200", async () => {
+        const response = await request(app).get("/v1/explorer/amount/node").send();
+        expect(response.statusCode).toBe(200);
+    });
+
+});

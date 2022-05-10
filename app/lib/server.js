@@ -15,6 +15,8 @@ app.listen(port, () => {
     console.log(`=== FizzBuzz API in localhost:${port} ===`);
 });
 
+app.get("/test");
+
 app.get("/v1/explorer/:mission", (req, res) => {
     const mission = req.params.mission;
     const explorersInMission = ExplorerController.getExplorerByMission(mission);
